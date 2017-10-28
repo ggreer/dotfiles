@@ -1,0 +1,43 @@
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+URxvt.scrollBar: false
+URxvt.loginShell: true
+URxvt.font: xft:ProggyTinyTTSZ:pixelsize=16
+URxvt.boldFont:
+! URxvt.boldFont: xft:ProggyTinyTTSZ:bold:pixelsize=16
+
+URxvt.perl-ext-common: default,matcher,tabbed,fullscreen
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.keysym.F11: perl:fullscreen:switch
+
+! Use ctrl to jump between words (doesn't seem to work)
+URxvt.keysym.Control-Up:     \033[1;5A
+URxvt.keysym.Control-Down:   \033[1;5B
+URxvt.keysym.Control-Left:   \033[1;5D
+URxvt.keysym.Control-Right:  \033[1;5C
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+# Needed for above keyboard shortcuts to work
+URxvt.iso14755: false
+
+*background: #000000
+*foreground: #ffffff
+
+Xcursor.theme: DMZ-Black
+
+Xft.hinting:   1
+Xft.hintstyle: hintmedium
+Xft.antialias: 1
+Xft.rgba: rgb

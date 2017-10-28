@@ -1,0 +1,11 @@
+gtk-icon-theme-name = "Adwaita"
+gtk-cursor-theme-name = "DMZ-Black"
+gtk-theme-name = "Numix"
+
+gtk-application-prefer-dark-theme = 1
+
+gtk-xft-antialias = 1
+gtk-xft-hinting = 1
+gtk-xft-hintstyle = hintmedium
+gtk-xft-rgba = rgb
+gtk-can-change-accels = 1
