@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export SWAY_CURSOR_THEME=DMZ-Black
+export XKB_DEFAULT_LAYOUT=dvorak
+eval $(ssh-agent)
+
+sway
