@@ -12,6 +12,6 @@ fi
 LOCK_IMG=/home/$USER/lockscreen.png
 swaygrab "$LOCK_IMG" && \
 #convert -blur 0x10 "$LOCK_IMG" "$LOCK_IMG" && \
-convert -scale 10% -scale 1000% "$LOCK_IMG" "$LOCK_IMG" && \
+convert -scale 12.5% -scale 800% "$LOCK_IMG" "$LOCK_IMG" && \
 # convert -scale 5% -scale 2000% "$LOCK_IMG" "$LOCK_IMG" && \
 swaylock -u -i "$LOCK_IMG" --font ProggyTinyTTSZ
