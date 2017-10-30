@@ -32,9 +32,9 @@ output * bg /home/ggreer/Pictures/wallhaven/wallhaven-562941.png fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP-1 resolution 1400x1050 position 0,1440 scale 1
-# output HDMI-A-2 position 0,-1080 scale 1
-# output HDMI-A-2 resolution 2560x1440 position 0,0 scale 1
+output eDP-1 resolution 1400x1050 position 0,0 scale 1
+output HDMI-A-2 position 0,-1080 scale 1
+# output HDMI-A-2 position 0,-1440 scale 1
 
 ### Input configuration
 #
@@ -80,6 +80,11 @@ output eDP-1 resolution 1400x1050 position 0,1440 scale 1
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/\* index:/{print $3}') +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/\* index:/{print $3}') -5%
     bindsym XF86AudioMute exec pactl set-sink-mute $(pacmd list-sinks |awk '/\* index:/{print $3}') toggle
+    # Get pause buttons working for mpv
+    bindsym XF86AudioPause exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
+    bindsym XF86AudioNext exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
+    bindsym XF86AudioPrev exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
+
     bindsym Print exec swaygrab ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
     bindsym $mod+XF86Back workspace prev_on_output
     bindsym $mod+XF86Forward workspace next_on_output
@@ -203,6 +208,8 @@ font pango:ProggyTinyTTSZ
 workspace_auto_back_and_forth yes
 # Enable floating for pinentry
 for_window [title="pinentry-gnome3"] floating enable, move position center
+for_window [class="Pavucontrol"] floating enable
+
 
 #
 # Status Bar:
@@ -231,3 +238,5 @@ client.focused            #cccccc #aaaaaa #000000 #2e9ef4   #cccccc
 include /etc/sway/config.d/*
 
 exec xrdb ~/.Xresources
+# Start browser
+exec chromium-browser

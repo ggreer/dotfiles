@@ -21,7 +21,7 @@ URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 URxvt.keysym.F11: perl:fullscreen:switch
 
-! Use ctrl to jump between words (doesn't seem to work)
+! Use ctrl to jump between words
 URxvt.keysym.Control-Up:     \033[1;5A
 URxvt.keysym.Control-Down:   \033[1;5B
 URxvt.keysym.Control-Left:   \033[1;5D
@@ -29,7 +29,7 @@ URxvt.keysym.Control-Right:  \033[1;5C
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-# Needed for above keyboard shortcuts to work
+! Needed for above keyboard shortcuts to work
 URxvt.iso14755: false
 
 *background: #000000

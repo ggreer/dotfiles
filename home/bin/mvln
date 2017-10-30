@@ -1,0 +1,25 @@
+#!/bin/sh
+
+if [ $# -lt 2 ]
+then
+  echo "$0: move a file, then create a symlink from its old location to its new location"
+  echo "Usage: $0 filename dest"
+  exit 0
+fi
+
+if [ -h "$1" ]
+then
+  echo "$1 is a symbolic link. Bailing."
+  exit 1
+fi
+
+if [ -d "$2" ]
+then
+  FILENAME=$(basename "$1")
+  mv "$1" "$2/$FILENAME" && \
+  ln -s "$2/$FILENAME" "$1" && \
+  exit 0
+fi
+
+mv "$1" "$2" && \
+ln -s "$2" "$1"
