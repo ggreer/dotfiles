@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+LOCKFILE=/tmp/sway.lock
+
+if [ -f $LOCKFILE ]
+then
+  echo 'swaylock already running'
+  exit 0
+fi
+
 # handle being called from systemd service
 if [ -z "$XDG_RUNTIME_DIR" ] && [ -z "$SWAYSOCK" ]
 then
@@ -14,4 +22,6 @@ swaygrab "$LOCK_IMG" && \
 #convert -blur 0x10 "$LOCK_IMG" "$LOCK_IMG" && \
 convert -scale 12.5% -scale 800% "$LOCK_IMG" "$LOCK_IMG" && \
 # convert -scale 5% -scale 2000% "$LOCK_IMG" "$LOCK_IMG" && \
-swaylock -u -i "$LOCK_IMG" --font ProggyTinyTTSZ
+touch $LOCKFILE
+swaylock -u -i "$LOCK_IMG" --font ProggyTinyTTSZ --scaling fill
+rm $LOCKFILE
