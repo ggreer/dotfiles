@@ -20,6 +20,8 @@ set $menu dmenu_run -fn ProggyTinyTTSZ
 
 hide_edge_borders both
 
+focus_follows_mouse false
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
