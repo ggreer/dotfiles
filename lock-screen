@@ -11,10 +11,21 @@ fi
 # handle being called from systemd service
 if [ -z "$XDG_RUNTIME_DIR" ] && [ -z "$SWAYSOCK" ]
 then
+  if [ -z "$USER" ]
+  then
+    # Horrible hack
+    USER=ggreer
+  fi
   uid=$(id -u "$USER")
   export XDG_RUNTIME_DIR="/run/user/$uid/"
-  SWAYSOCK=$(find "$XDG_RUNTIME_DIR" -iname "sway*sock")
+  SWAYSOCK=$(find "$XDG_RUNTIME_DIR" -maxdepth 1 -iname "sway*sock")
   export SWAYSOCK
+fi
+
+if [ -z "$DISPLAY" ]
+then
+  # Horrible hack in case we lack this env var
+  export DISPLAY=:0
 fi
 
 LOCK_IMG=/home/$USER/lockscreen.png
