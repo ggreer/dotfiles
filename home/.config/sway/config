@@ -241,5 +241,3 @@ client.focused            #cccccc #aaaaaa #000000 #2e9ef4   #cccccc
 include /etc/sway/config.d/*
 
 exec xrdb ~/.Xresources
-# Start browser
-exec chromium-browser
