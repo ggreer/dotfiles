@@ -31,8 +31,7 @@ ethernet bnep0 {
 }
 
 ethernet _first_ {
-  # if you use %speed, i3status requires root privileges
-  format_up = "E: (%speed)"
+  format_up = "E: %speed"
   format_down = "E: -"
   color_bad = "#aaaaaa"
   color_good = "#ffffff"
