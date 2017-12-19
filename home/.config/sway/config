@@ -26,8 +26,10 @@ focus_follows_mouse false
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
 #output * bg /usr/local/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# red triangles
 # output * bg /home/ggreer/Pictures/wallhaven/wallhaven-168635.png fill
-output * bg /home/ggreer/Pictures/wallhaven/wallhaven-562941.png fill
+# 80's neon computer sunset
+# output * bg /home/ggreer/Pictures/wallhaven/wallhaven-562941.png fill
 #
 # Example configuration:
 #
@@ -96,10 +98,10 @@ output eDP-1 resolution 1400x1050 position 0,0 scale 1
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+#    bindsym $mod+$left focus left
+#    bindsym $mod+$down focus down
+#    bindsym $mod+$up focus up
+#    bindsym $mod+$right focus right
     # or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -107,10 +109,10 @@ output eDP-1 resolution 1400x1050 position 0,0 scale 1
     bindsym $mod+Right focus right
 
     # _move_ the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+#    bindsym $mod+Shift+$left move left
+#    bindsym $mod+Shift+$down move down
+#    bindsym $mod+Shift+$up move up
+#    bindsym $mod+Shift+$right move right
     # ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
@@ -188,10 +190,10 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10 px or 10 ppt
-    bindsym $down resize grow height 10 px or 10 ppt
-    bindsym $up resize shrink height 10 px or 10 ppt
-    bindsym $right resize grow width 10 px or 10 ppt
+#    bindsym $left resize shrink width 10 px or 10 ppt
+#    bindsym $down resize grow height 10 px or 10 ppt
+#    bindsym $up resize shrink height 10 px or 10 ppt
+#    bindsym $right resize grow width 10 px or 10 ppt
 
     # ditto, with arrow keys
     bindsym Left resize shrink width 10 px or 10 ppt
