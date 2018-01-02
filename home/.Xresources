@@ -7,6 +7,8 @@ URxvt*scrollWithBuffer: true
 ! scroll back to the bottom on keypress
 URxvt*scrollTtyKeypress: true
 
+URxvt.saveLines: 20000
+
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 
