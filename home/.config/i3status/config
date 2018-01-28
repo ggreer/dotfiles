@@ -65,6 +65,8 @@ battery all {
   status_bat = "BAT"
   status_unk = "???"
   status_full = "FUL"
+  low_threshold = 10
+  threshold_type = "percentage"
 }
 
 tztime local {
