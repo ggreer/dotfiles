@@ -215,6 +215,7 @@ for_window [title="pinentry-gnome3"] floating enable, move position center
 for_window [class="Pavucontrol"] floating enable
 for_window [class="chromium"] border none
 for_window [class="nautilus"] border none
+floating_minimum_size 400 x 300
 
 #
 # Status Bar:
