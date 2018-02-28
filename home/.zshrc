@@ -169,6 +169,10 @@ alias op='xdg-open'
 # bindkey '^[[1;5C' forward-word # [Ctrl-RightArrow] - move forward one word
 # bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
 
+# Use alt + arrows to move between words
+bindkey "\e$terminfo[kcub1]" backward-word
+bindkey "\e$terminfo[kcuf1]" forward-word
+
 # Get fn+delete working in zsh
 # bindkey "^[[3~" delete-char
 
