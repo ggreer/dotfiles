@@ -23,11 +23,14 @@ URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 URxvt.keysym.F11: perl:fullscreen:switch
 
+! Disable tabbed keys so that ctrl+arrows works
+! URxvt.tabbed.no-tabbedex-keys: true
+
 ! Use ctrl to jump between words
-URxvt.keysym.Control-Up:     \033[1;5A
-URxvt.keysym.Control-Down:   \033[1;5B
-URxvt.keysym.Control-Left:   \033[1;5D
-URxvt.keysym.Control-Right:  \033[1;5C
+! URxvt.keysym.Control-Up:     \033[1;5A
+! URxvt.keysym.Control-Down:   \033[1;5B
+! URxvt.keysym.Control-Left:   \033[1;5D
+! URxvt.keysym.Control-Right:  \033[1;5C
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
