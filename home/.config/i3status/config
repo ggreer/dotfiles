@@ -5,8 +5,8 @@ general {
 
 # order += "ipv6"
 order += "wireless _first_"
-order += "ethernet _first_"
 order += "ethernet bnep0"
+order += "ethernet _first_"
 order += "cpu_temperature 0"
 order += "cpu_usage"
 # order += "load"
@@ -21,6 +21,7 @@ wireless _first_ {
   format_down = "W: -"
   color_bad = "#aaaaaa"
   color_good = "#ffffff"
+  separator_block_width = 20
 }
 
 ethernet bnep0 {
@@ -28,6 +29,7 @@ ethernet bnep0 {
   format_down = "BT: -"
   color_bad = "#aaaaaa"
   color_good = "#ffffff"
+  separator_block_width = 20
 }
 
 ethernet _first_ {
@@ -35,15 +37,20 @@ ethernet _first_ {
   format_down = "E: -"
   color_bad = "#aaaaaa"
   color_good = "#ffffff"
+  # trying to make connected eth not be yellow
+  color_degraded = "#cccccc"
+  separator_block_width = 20
 }
 
 cpu_temperature 0 {
   format = "%degrees °C"
   path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
   max_threshold = 85
+  separator_block_width = 20
 }
 cpu_usage {
   format = "%usage"
+  separator_block_width = 20
 }
 load {
   format = "%1min"
@@ -53,6 +60,7 @@ disk "/" {
   format = "%avail"
   prefix_type = "decimal"
   low_threshold = 5
+  separator_block_width = 20
 }
 
 battery all {
@@ -65,16 +73,19 @@ battery all {
   status_bat = "BAT"
   status_unk = "???"
   status_full = "FUL"
-  low_threshold = 10
+  low_threshold = 15
   threshold_type = "percentage"
+  separator_block_width = 20
 }
 
 tztime local {
   format = "%Y-%m-%d %H:%M"
+  separator_block_width = 20
 }
 tztime utc {
   format = "%H:%MZ"
   timezone = "UTC"
+  separator_block_width = 20
 }
 
 volume master {
@@ -83,4 +94,8 @@ volume master {
   device = "default"
   mixer = "Master"
   mixer_idx = 0
+  # make muted gray, not yellow
+  color_degraded = "#aaaaaa"
+  min_width = 50
+  separator_block_width = 20
 }
