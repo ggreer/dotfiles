@@ -14,8 +14,10 @@ set $mod Mod4
 #set $up t
 #set $right n
 # Your preferred terminal emulator
-set $term urxvt
+set $term gnome-terminal
+#set $term urxvt
 # Your preferred application launcher
+#set $menu dmenu_run -i -fn SourceCodePro-Regular-9
 set $menu dmenu_run -i -fn ProggyTinyTTSZ
 # -b == bottom of screen
 # -i == case insensitive
@@ -23,9 +25,9 @@ set $menu dmenu_run -i -fn ProggyTinyTTSZ
 
 # debuglog on
 
-# Seems deprecated in sway 1.0
 hide_edge_borders both
 
+default_border normal 1
 focus_follows_mouse false
 
 ### Output configuration
@@ -43,8 +45,12 @@ focus_follows_mouse false
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 output eDP-1 resolution 1400x1050 position 0,0 scale 1
-# output HDMI-A-2 scale 1
-# output DP-1 scale 1.5
+#output HDMI-A-2 scale 1
+#output DP-1 scale 1
+# For 4k monitor ('Goldstar Company Ltd LG Ultra HD 0x0000577B')
+#output DP-1 scale 1.5
+output DP-1 scale 2
+
 # output HDMI-A-2 position 0,-1080 scale 1
 # output HDMI-A-2 position 0,-1440 scale 1
 
@@ -113,6 +119,7 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
     bindsym $mod+XF86Forward workspace next_on_output
     bindsym $mod+Shift+XF86Back move container to workspace prev_on_output
     bindsym $mod+Shift+XF86Forward move container to workspace next_on_output
+    #TODO: figure out if it's possible to move workspaces to another output
 #
 # Moving around:
 #
@@ -226,9 +233,8 @@ mode "resize" {
 }
 bindsym $mod+p mode "resize"
 
-#font pango:ProggyTinyTTSZ
-# https://github.com/swaywm/sway/issues/1903
 font ProggyTinyTTSZ
+#font "Source Code Pro Regular 9"
 
 workspace_auto_back_and_forth yes
 # Enable floating for pinentry
@@ -245,13 +251,14 @@ floating_minimum_size 400 x 300
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     id main_bar
-    font pango:ProggyTinyTTSZ
+#    font "Source Code Pro Regular 9"
+    font ProggyTinyTTSZ
     position top
     status_command i3status
     colors {
         statusline #ffffff
         background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        inactive_workspace #323232 #323232 #5c5c5c
     }
 }
 
@@ -266,5 +273,12 @@ client.focused            #cccccc #aaaaaa #000000 #2e9ef4   #cccccc
 # client.background       #ffffff
 
 include /etc/sway/config.d/*
+#include /etc/sway/security.d/*
 
 exec xrdb ~/.Xresources
+
+exec swayidle \
+    timeout 300 'swaylock -c 000000' \
+    timeout 600 'swaymsg "output * dpms off"' \
+       resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -c 000000'
