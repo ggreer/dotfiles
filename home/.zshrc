@@ -230,3 +230,10 @@ function pman() {
 function multi {
     n=$1; shift; for ((i=0;i<n;i++)) do $@; done;
 }
+
+# If running trom tty1, start sway
+if [ $(tty) = "/dev/tty1" ]
+then
+    sway-run
+    exit 0
+fi
