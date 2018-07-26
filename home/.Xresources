@@ -41,6 +41,7 @@ URxvt.iso14755: false
 *foreground: #ffffff
 
 Xcursor.theme: DMZ-Black
+Xcursor.size: 16
 
 Xft.hinting:   1
 Xft.hintstyle: hintmedium
