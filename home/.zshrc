@@ -116,11 +116,15 @@ export JAVA_HOME=/usr
 
 export NODE_REPL_HISTORY_FILE=~/.node_history
 
+# Only page if more than a page
+export LESS="-F -X $LESS"
+
 export CLICOLOR=1
 export GREP_COLOR=auto
 export LSCOLORS=Exgxcxdxbxegedabagacad
 export WORDCHARS='*?[]~&;!$%^<>'
-
+export SFT_DEPLOY_AUTHOR=ggreer
+export SFT_DEPLOY_AUTHOR_EMAIL='geoff@greer.fm'
 
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
