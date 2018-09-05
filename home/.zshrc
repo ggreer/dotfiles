@@ -152,8 +152,15 @@ alias mv='nocorrect mv'
 alias cp='nocorrect cp'
 alias mkdir='nocorrect mkdir'
 
-alias ls='ls -F --color=auto'
-#alias ls='ls -GF'
+if ls --color=auto > /dev/null
+then
+    # GNU ls
+    alias ls='ls -F --color=auto'
+else
+    # BSD ls
+    alias ls='ls -GF'
+fi
+
 alias te='ls -a -F'
 alias tu='ls -la'
 alias ll='ls -la'
