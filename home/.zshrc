@@ -152,7 +152,7 @@ alias mv='nocorrect mv'
 alias cp='nocorrect cp'
 alias mkdir='nocorrect mkdir'
 
-if ls --color=auto > /dev/null
+if ls --color=auto &> /dev/null
 then
     # GNU ls
     alias ls='ls -F --color=auto'
