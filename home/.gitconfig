@@ -1,0 +1,23 @@
+[user]
+    name = Geoff Greer
+    email = geoff@greer.fm
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[core]
+    deltaBaseCacheLimit = 1G
+[branch]
+    autosetupmerge = true
+[push]
+    default = matching
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
