@@ -45,14 +45,10 @@ focus_follows_mouse false
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 output eDP-1 resolution 1400x1050 position 0,0 scale 1
-#output HDMI-A-2 scale 1
-#output DP-1 scale 1
+# miniHDMI
+output HDMI-A-2 scale 1
 # For 4k monitor ('Goldstar Company Ltd LG Ultra HD 0x0000577B')
-#output DP-1 scale 1.5
-output DP-1 scale 2
-
-# output HDMI-A-2 position 0,-1080 scale 1
-# output HDMI-A-2 position 0,-1440 scale 1
+output DP-1 scale 1.5
 
 ### Input configuration
 #
@@ -70,9 +66,13 @@ output DP-1 scale 2
 
 input "2:10:TPPS/2_IBM_TrackPoint" {
     accel_profile flat
-#    pointer_accel 0.4
-    pointer_accel 0.7
+    pointer_accel 0.8 # Default = 0.4
     dwt enabled
+    natural_scroll enabled
+}
+
+input "2362:9522:PixArt_Gaming_Mouse" {
+    accel_profile flat
     natural_scroll enabled
 }
 
@@ -120,6 +120,8 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
     bindsym $mod+Shift+XF86Back move container to workspace prev_on_output
     bindsym $mod+Shift+XF86Forward move container to workspace next_on_output
     #TODO: figure out if it's possible to move workspaces to another output
+    bindsym $mod+Ctrl+XF86Back move workspace to output left
+    bindsym $mod+Ctrl+XF86Forward move workspace to output right
 #
 # Moving around:
 #
@@ -233,8 +235,8 @@ mode "resize" {
 }
 bindsym $mod+p mode "resize"
 
-font ProggyTinyTTSZ
-#font "Source Code Pro Regular 9"
+# font ProggyTinyTTSZ
+font "Source Code Pro Regular 9"
 
 workspace_auto_back_and_forth yes
 # Enable floating for pinentry
@@ -251,8 +253,8 @@ floating_minimum_size 400 x 300
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     id main_bar
-#    font "Source Code Pro Regular 9"
-    font ProggyTinyTTSZ
+    font "Source Code Pro Regular 9"
+#    font ProggyTinyTTSZ
     position top
     status_command i3status
     colors {
