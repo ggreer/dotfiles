@@ -114,7 +114,7 @@ input "2362:9522:PixArt_Gaming_Mouse" {
     bindsym XF86AudioNext exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
     bindsym XF86AudioPrev exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
 
-    bindsym Print exec swaygrab ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
+    bindsym Print exec grim ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
     bindsym $mod+XF86Back workspace prev_on_output
     bindsym $mod+XF86Forward workspace next_on_output
     bindsym $mod+Shift+XF86Back move container to workspace prev_on_output

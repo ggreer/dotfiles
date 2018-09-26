@@ -28,14 +28,14 @@ then
   export DISPLAY=:0
 fi
 
-#LOCK_IMG=/home/$USER/lockscreen.png
-#swaygrab "$LOCK_IMG" && \
+LOCK_IMG=/home/$USER/lockscreen.png
+grim "$LOCK_IMG" && \
 #convert -blur 0x10 "$LOCK_IMG" "$LOCK_IMG" && \
-#convert -scale 12.5% -scale 800% "$LOCK_IMG" "$LOCK_IMG" && \
+convert -scale 12.5% -scale 800% "$LOCK_IMG" "$LOCK_IMG" && \
 # convert -scale 5% -scale 2000% "$LOCK_IMG" "$LOCK_IMG" && \
 touch $LOCKFILE
-swaylock -c 000000
+# swaylock -c 000000
 # -u == hide lock feedback
 #swaylock -u -i "$LOCK_IMG" --font ProggyTinyTTSZ --scaling fill
-#swaylock -i "$LOCK_IMG" --font ProggyTinyTTSZ --scaling fill
+swaylock -i "$LOCK_IMG" --font "Source Code Pro" --scaling fill
 rm $LOCKFILE
