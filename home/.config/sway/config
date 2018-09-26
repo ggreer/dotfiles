@@ -17,8 +17,8 @@ set $mod Mod4
 set $term gnome-terminal
 #set $term urxvt
 # Your preferred application launcher
-#set $menu dmenu_run -i -fn SourceCodePro-Regular-9
-set $menu dmenu_run -i -fn ProggyTinyTTSZ
+set $menu dmenu_run -i -fn SourceCodePro-Regular
+#set $menu dmenu_run -i -fn ProggyTinyTTSZ
 # -b == bottom of screen
 # -i == case insensitive
 # -fn == font
@@ -280,7 +280,7 @@ include /etc/sway/config.d/*
 exec xrdb ~/.Xresources
 
 exec swayidle \
-    timeout 300 'swaylock -c 000000' \
+    timeout 300 'lock-screen' \
     timeout 600 'swaymsg "output * dpms off"' \
        resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -c 000000'
