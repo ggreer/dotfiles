@@ -28,7 +28,7 @@ set $menu dmenu_run -i -fn SourceCodePro-Regular
 hide_edge_borders both
 
 default_border normal 1
-focus_follows_mouse false
+focus_follows_mouse no
 
 ### Output configuration
 #
