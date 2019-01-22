@@ -1,0 +1,62 @@
+{
+	"always_show_minimap_viewport": true,
+	"auto_complete": true,
+	"caret_style": "wide",
+	"color_scheme": "Packages/Babel/Monokai Phoenix.tmTheme",
+	"dpi_scale": 1.0,
+	"draw_white_space": "selection",
+	"file_exclude_patterns":
+	[
+		"frontend/stats.json",
+		"*.pyc",
+		"*.pyo",
+		"*.o"
+	],
+	"folder_exclude_patterns":
+	[
+		".build",
+		".cache-loader",
+		".git",
+		".hg",
+		".svn",
+		".vagrant",
+		"_site",
+		"assets/frontend",
+		"CVS",
+		"node_modules",
+		"public/dist",
+		"static/CACHE",
+		"static/js/build",
+		"static/js/extern",
+		"vendor",
+		"frontend/dist"
+	],
+	"font_face": "Source Code Pro",
+	"font_face-z": "ProggyTinyTTSZ",
+	"font_options-z":
+	[
+		"no_clig",
+		"no_liga",
+		"no_calt",
+		"no_antialias"
+	],
+	"font_size": 9,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"SublimeLinter-contrib-proselint",
+		"Vintage"
+	],
+	"preview_on_click": false,
+	"show_full_path": false,
+	"show_line_endings": true,
+	"show_tab_close_buttons": false,
+	"soda_classic_tabs": false,
+	"tab_size": 2,
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"tree_animation_enabled": false,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": false,
+	"word_wrap": true
+}
