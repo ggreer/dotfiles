@@ -192,6 +192,11 @@ bindkey "\e$terminfo[kcuf1]" forward-word
 # zle -N edit-command-line
 # bindkey '^X^e' edit-command-line
 
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+### Utility functions ###
+
 rot13 () { tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M]" }
 
 function git-rm-untracked {
