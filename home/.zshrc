@@ -109,7 +109,7 @@ export GIT_EDITOR=$EDITOR
 export SVN_EDITOR=$EDITOR
 
 # Parallelize builds by default
-export MAKEFLAGS="-j4"
+export MAKEFLAGS="-j8"
 export PYTHONDONTWRITEBYTECODE=1
 
 export JAVA_HOME=/usr
