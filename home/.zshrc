@@ -176,6 +176,7 @@ alias lock='lock-screen'
 alias op='xdg-open'
 #alias op='open'
 
+alias oktagit="GIT_SSH_COMMAND='ssh -o \"IdentitiesOnly=yes\" -i ~/.ssh/id_rsa_okta' git"
 # bindkey -e #Use emacs mode, it's more sane for beginners
 # bindkey '^[[1;5C' forward-word # [Ctrl-RightArrow] - move forward one word
 # bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
