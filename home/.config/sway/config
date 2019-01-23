@@ -27,7 +27,7 @@ set $menu dmenu_run -i -fn SourceCodePro-Regular
 
 hide_edge_borders both
 
-default_border normal 1
+default_border normal 2
 focus_follows_mouse no
 
 ### Output configuration
@@ -44,11 +44,18 @@ focus_follows_mouse no
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP-1 resolution 1400x1050 position 0,0 scale 1
-# miniHDMI
-output HDMI-A-2 scale 1
-# For 4k monitor ('Goldstar Company Ltd LG Ultra HD 0x0000577B')
-output DP-1 scale 1.5
+
+# x62 screen
+#output eDP-1 resolution 1400x1050 position 0,0 scale 1
+# x210 screen
+output eDP-1 position 0,0 scale 2
+# miniHDMI on x62
+#output HDMI-A-2 scale 1
+# For 4k monitor ('Goldstar Company Ltd LG Ultra HD 0x0000577B') on x62
+#output DP-1 scale 1.5
+# For 4k monitor ('Goldstar Company Ltd LG Ultra HD 0x0000577B') on x210
+output DP-2 scale 1.5
+
 
 ### Input configuration
 #
@@ -75,6 +82,8 @@ input "2362:9522:PixArt_Gaming_Mouse" {
     accel_profile flat
     natural_scroll enabled
 }
+
+seat * hide_cursor 1800
 
 ### Key bindings
 #
