@@ -15,7 +15,7 @@ URxvt.secondaryScroll: 0
 URxvt.scrollBar: false
 URxvt.loginShell: true
 URxvt.font: xft:ProggyTinyTTSZ:pixelsize=16
-URxvt.boldFont:
+!URxvt.boldFont:
 ! URxvt.boldFont: xft:ProggyTinyTTSZ:bold:pixelsize=16
 
 URxvt.perl-ext-common: default,matcher,tabbed,fullscreen
