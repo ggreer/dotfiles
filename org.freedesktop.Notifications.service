@@ -1,0 +1,4 @@
+# Place in /usr/share/dbus-1/services on most systems
+[D-BUS Service]
+Name=org.freedesktop.Notifications
+Exec=/usr/local/bin/mako
