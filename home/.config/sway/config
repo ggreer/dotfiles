@@ -283,12 +283,12 @@ client.focused            #cccccc #aaaaaa #000000 #2e9ef4   #cccccc
 # client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # client.background       #ffffff
 
-include /etc/sway/config.d/*
+#include /etc/sway/config.d/*
 #include /etc/sway/security.d/*
 
 exec xrdb ~/.Xresources
 
-exec swayidle \
+exec swayidle -w \
     timeout 300 'lock-screen' \
     timeout 600 'swaymsg "output * dpms off"' \
        resume 'swaymsg "output * dpms on"' \
