@@ -37,5 +37,5 @@ touch $LOCKFILE
 # swaylock -c 000000
 # -u == hide lock feedback
 #swaylock -u -i "$LOCK_IMG" --font ProggyTinyTTSZ --scaling fill
-swaylock -i "$LOCK_IMG" --font "Source Code Pro" --scaling fill
+swaylock -f -i "$LOCK_IMG" --font "Source Code Pro" --scaling fill
 rm $LOCKFILE
