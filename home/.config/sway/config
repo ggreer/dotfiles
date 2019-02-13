@@ -17,8 +17,8 @@ set $mod Mod4
 set $term gnome-terminal
 #set $term urxvt
 # Your preferred application launcher
-set $menu dmenu_run -i -fn SourceCodePro-Regular
-#set $menu dmenu_run -i -fn ProggyTinyTTSZ
+set $menu dmenu_run -i -l 8 -m 0 -fn SourceCodePro-Regular -nb \#222 -nf \#aaa -sb \#000 -sf \#fff
+
 # -b == bottom of screen
 # -i == case insensitive
 # -fn == font
