@@ -137,6 +137,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=50000
 SAVEHIST=50000
 setopt INC_APPEND_HISTORY EXTENDED_HISTORY HIST_IGNORE_DUPS
+# Use up/down for next/prev when searching history
+# bindkey "^[[A" history-beginning-search-backward
+# bindkey "^[[B" history-beginning-search-forward
 
 DIRSTACKSIZE=8
 setopt autopushd pushdminus pushdsilent pushdtohome
