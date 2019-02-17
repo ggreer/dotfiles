@@ -114,7 +114,7 @@ seat * hide_cursor 1800
     # exit sway (logs you out of your wayland session)
     bindsym $mod+Shift+q exit
 
-    bindsym $mod+n exec /usr/local/bin/lock-screen
+    bindsym $mod+n exec ~/bin/lock-screen
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/\* index:/{print $3}') +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/\* index:/{print $3}') -5%
     bindsym XF86AudioMute exec pactl set-sink-mute $(pacmd list-sinks |awk '/\* index:/{print $3}') toggle
