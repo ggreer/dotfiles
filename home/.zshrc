@@ -128,7 +128,7 @@ export SFT_DEPLOY_AUTHOR_EMAIL='geoff@greer.fm'
 # Run Qt apps in wayland mode
 export XDG_SESSION_TYPE=wayland
 # Run firefox in wayland mode
-export GDK_BACKEND=wayland
+# export GDK_BACKEND=wayland (commented out because it breaks thunderbird & chromium)
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # Fix for xquartz
