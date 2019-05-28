@@ -127,7 +127,13 @@ export SFT_DEPLOY_AUTHOR=ggreer
 export SFT_DEPLOY_AUTHOR_EMAIL='geoff@greer.fm'
 # Run Qt apps in wayland mode
 export XDG_SESSION_TYPE=wayland
+export QT_QPA_PLATFORM=wayland
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+# Fix blank windows & incorrect offsets in some java apps in wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
 # Run firefox in wayland mode
+export MOZ_ENABLE_WAYLAND=1
+# Run all gtk apps in wayland mode
 # export GDK_BACKEND=wayland (commented out because it breaks thunderbird & chromium)
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
