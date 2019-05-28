@@ -130,9 +130,9 @@ seat * hide_cursor 1800
     bindsym $mod+XF86Forward workspace next_on_output
     bindsym $mod+Shift+XF86Back move container to workspace prev_on_output
     bindsym $mod+Shift+XF86Forward move container to workspace next_on_output
-    #TODO: figure out if it's possible to move workspaces to another output
     bindsym $mod+Ctrl+XF86Back move workspace to output left
     bindsym $mod+Ctrl+XF86Forward move workspace to output right
+    bindsym $mod+Escape exec swaymsg output eDP-1 toggle
 #
 # Moving around:
 #
