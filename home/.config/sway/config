@@ -85,6 +85,12 @@ input "2362:9522:PixArt_Gaming_Mouse" {
     natural_scroll enabled
 }
 
+input "1133:49257:Logitech_USB_Laser_Mouse" {
+    accel_profile flat
+    pointer_accel 1
+    natural_scroll enabled
+}
+
 seat * hide_cursor 1800
 
 ### Key bindings
@@ -128,6 +134,9 @@ seat * hide_cursor 1800
     bindsym Print exec grim ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
     bindsym $mod+XF86Back workspace prev_on_output
     bindsym $mod+XF86Forward workspace next_on_output
+    bindsym $mod+Mod1+Left workspace prev_on_output
+    bindsym $mod+Mod1+Right workspace next_on_output
+
     bindsym $mod+Shift+XF86Back move container to workspace prev_on_output
     bindsym $mod+Shift+XF86Forward move container to workspace next_on_output
     bindsym $mod+Ctrl+XF86Back move workspace to output left
