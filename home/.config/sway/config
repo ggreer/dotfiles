@@ -49,14 +49,17 @@ focus_follows_mouse no
 
 # x62 screen
 #output eDP-1 position 0,0 scale 1 subpixel rgb
-# x210 screen
-output eDP-1 position 0,0 scale 2 subpixel rgb
 # miniHDMI on x62
 #output HDMI-A-2 scale 1
 # For 4k monitor ('Goldstar Company Ltd LG Ultra HD 0x0000577B') on x62
 #output DP-1 scale 1.5 subpixel rgb
+
+# x210 screen
+output eDP-1 position 0,0 scale 2 subpixel rgb
+#output eDP-1 position 0,1440 scale 2 subpixel rgb
 # For 4k monitor ('Goldstar Company Ltd LG Ultra HD 0x0000577B') on x210
-output DP-2 scale 1.5 subpixel rgb pos 0,-1440
+output DP-2 scale 1.5 subpixel rgb
+#pos 0,-1440
 
 
 ### Input configuration
