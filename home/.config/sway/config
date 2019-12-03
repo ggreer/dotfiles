@@ -93,6 +93,9 @@ input "1133:49257:Logitech_USB_Laser_Mouse" {
 
 seat * hide_cursor 1800
 
+# Auto warp mouse to focus
+#mouse_warping container
+
 ### Key bindings
 #
 # Basics:
