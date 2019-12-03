@@ -271,13 +271,14 @@ for_window [class="Pavucontrol"] floating enable
 
 # No titles on things I tend to keep on their own workspaces (browsers, slack)
 for_window [class="Chromium-browser"] border pixel 2
-for_window [class="Firefox"] border pixel 2
+for_window [app_id="firefox"] border pixel 2
 for_window [class="Slack"] border pixel 2
 for_window [app_id="firefox-trunk"] border pixel 2
 for_window [app_id="gnome-terminal-server"] border pixel 2
 
 # Inhibit idle for fullscreen browser stuff (mostly to prevent locking when watching youtube videos)
 for_window [app_id="firefox-trunk"] inhibit_idle fullscreen
+for_window [app_id="firefox"] inhibit_idle fullscreen
 
 # floating_minimum_size 400 x 300
 
