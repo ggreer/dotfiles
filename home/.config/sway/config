@@ -115,8 +115,7 @@ seat * hide_cursor 1800
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
-    # seems deprecated in sway 1.0
+    # mouse button for dragging/resizing
     floating_modifier $mod normal
 
     # reload the configuration file
