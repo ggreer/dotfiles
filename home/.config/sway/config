@@ -320,6 +320,7 @@ exec xrdb ~/.Xresources
 exec --no-startup-id xrandr --dpi 96
 
 exec swayidle -w \
+    timeout 290 'notify-send -t 10000 "Screen will soon lock due to idle"' \
     timeout 300 'lock-screen' \
     timeout 600 'swaymsg "output * dpms off"' \
        resume 'swaymsg "output * dpms on"' \
