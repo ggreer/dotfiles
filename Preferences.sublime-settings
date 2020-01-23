@@ -2,7 +2,7 @@
 	"always_show_minimap_viewport": true,
 	"auto_complete": true,
 	"caret_style": "wide",
-	"color_scheme": "Packages/Babel/Monokai Phoenix.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"dpi_scale": 1.0,
 	"draw_white_space": "selection",
 	"file_exclude_patterns":
@@ -29,7 +29,9 @@
 		"static/js/build",
 		"static/js/extern",
 		"vendor",
-		"frontend/dist"
+		"frontend/dist",
+		"frontend/fontawesome",
+		"build"
 	],
 	"font_face": "Source Code Pro",
 	"font_face-z": "ProggyTinyTTSZ",
@@ -40,14 +42,15 @@
 		"no_calt",
 		"no_antialias"
 	],
-	"font_size": 9,
+	"font_size": 8,
+	"font_size-z": 12,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"SublimeLinter-contrib-proselint",
 		"Vintage"
 	],
 	"preview_on_click": false,
+	"scroll_speed": 0.0,
 	"show_full_path": false,
 	"show_line_endings": true,
 	"show_tab_close_buttons": false,
