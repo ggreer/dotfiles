@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 
 export GOPATH=$HOME/go
 
-PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/games:$GOPATH/bin
+PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/games:/snap/bin:$GOPATH/bin
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 CDPATH=.:~
