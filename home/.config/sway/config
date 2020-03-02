@@ -94,6 +94,11 @@ input "1133:49257:Logitech_USB_Laser_Mouse" {
     natural_scroll enabled
 }
 
+input * {
+    xkb_layout us
+    xkb_variant dvorak
+}
+
 seat * hide_cursor 1800
 
 # Auto warp mouse to focus
