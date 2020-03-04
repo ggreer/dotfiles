@@ -221,7 +221,7 @@ function ascp {
 }
 
 function upscreen {
-    URL=$(python -c "import urllib; print urllib.quote('''$1''')")
+    URL=$(python3 -c "import urllib.parse; print(urllib.parse.quote('''$1'''))")
     echo http://abughrai.be/pics/screenshots/$URL
     scp "$@" abughrai.be:/usr/local/www/apache24/data/pics/screenshots/ ;
 }
