@@ -99,13 +99,14 @@ tztime utc {
 }
 
 volume master {
-  format = "VOL %volume"
-  format_muted = "MUT %volume"
+  format = "🔉 %volume"
+  format_muted = "🔇 %volume"
   device = "default"
   mixer = "Master"
   mixer_idx = 0
   # make muted gray, not yellow
   color_degraded = "#aaaaaa"
-  min_width = 50
+  align = "left"
+  min_width = 100
   separator_block_width = 20
 }
