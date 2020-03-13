@@ -10,6 +10,7 @@ order += "ethernet _first_"
 order += "path_exists VPN"
 order += "cpu_temperature 0"
 order += "cpu_usage"
+order += "memory"
 # order += "load"
 order += "disk /"
 order += "battery all"
@@ -52,7 +53,7 @@ ethernet _first_ {
 }
 
 cpu_temperature 0 {
-  format = "%degrees °C"
+  format = "%degrees°C"
   path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
   #path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
   max_threshold = 85
@@ -66,8 +67,15 @@ load {
   format = "%1min"
 }
 
+memory {
+  format = "🐏 %available"
+  threshold_degraded = "1G"
+  separator_block_width = 20
+  min_width = 50
+}
+
 disk "/" {
-  format = "%avail"
+  format = "💾 %avail"
   prefix_type = "decimal"
   low_threshold = 5
   separator_block_width = 20
@@ -79,10 +87,10 @@ battery all {
   hide_seconds = true
   integer_battery_capacity = true
   last_full_capacity = true
-  status_chr = "CHR"
-  status_bat = "BAT"
-  status_unk = "???"
-  status_full = "FUL"
+  status_chr = "⚡️"
+  status_bat = "🔋"
+  status_unk = "❔"
+  status_full = "🔌"
   low_threshold = 15
   threshold_type = "percentage"
   separator_block_width = 20
