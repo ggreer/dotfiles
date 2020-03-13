@@ -61,6 +61,9 @@ output eDP-1 position 0,0 scale 2 subpixel rgb
 output DP-2 scale 1.5 subpixel rgb
 #pos 0,-1440
 
+# x1 carbon hdmi
+output HDMI-A-1 scale 1.5 subpixel rgb
+
 
 ### Input configuration
 #
@@ -76,11 +79,25 @@ output DP-2 scale 1.5 subpixel rgb
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input * {
+    natural_scroll enabled
+}
+
 input "2:10:TPPS/2_IBM_TrackPoint" {
     accel_profile flat
     pointer_accel 0.8 # Default = 0.4
     dwt enabled
-    natural_scroll enabled
+}
+
+# X1 carbon touchpad
+input "1739:52619:SYNA8004:00_06CB:CD8B_Touchpad" {
+    tap enabled
+}
+# X1 carbon trackpoint
+input "2:10:TPPS/2_Elan_TrackPoint" {
+    accel_profile flat
+    pointer_accel 0.8 # Default = 0.4
+    dwt enabled
 }
 
 input "2362:9522:PixArt_Gaming_Mouse" {
@@ -140,6 +157,9 @@ seat * hide_cursor 1800
     bindsym XF86AudioPause exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
     bindsym XF86AudioNext exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
     bindsym XF86AudioPrev exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
+
+    bindsym XF86MonBrightnessDown exec light -U 3
+    bindsym XF86MonBrightnessUp exec light -A 3
 
     bindsym Print exec grim ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
     bindsym $mod+XF86Back workspace prev_on_output
