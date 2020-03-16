@@ -40,6 +40,10 @@ focus_follows_mouse no
 #output * bg ~/Pictures/Backgrounds/wallhaven-562941.png fill
 # galaxy cube thing
 #output * bg ~/Pictures/Backgrounds/wallhaven-721309.png fill
+# black with neon swirls
+#output * bg ~/Pictures/Backgrounds/wallhaven-zm9zwo.png fill
+#output * bg #000000 solid_color
+
 #
 # Example configuration:
 #

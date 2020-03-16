@@ -8,7 +8,7 @@ then
   exit 0
 fi
 
-swaylock -f -i "/home/$USER/Pictures/Backgrounds/wallhaven-721309.png" --font "Source Code Pro" --scaling fill
+swaylock -f -i "/home/$USER/Pictures/Backgrounds/wallhaven-zm9zwo.png" --font "Source Code Pro" --scaling fill
 exit 0
 
 # handle being called from systemd service
