@@ -348,13 +348,12 @@ exec xrdb ~/.Xresources
 # Stop X apps from getting double upscaled
 exec --no-startup-id xrandr --dpi 96
 
+# Start notification daemon
+exec mako
+
 exec swayidle -w \
-    timeout 290 'notify-send -t 10000 "Screen will idle lock in 10 seconds"' \
-    timeout 295 'notify-send -t 10000 "Screen will idle lock in 5 seconds"' \
-    timeout 296 'notify-send -t 10000 "Screen will idle lock in 4 seconds"' \
-    timeout 297 'notify-send -t 10000 "Screen will idle lock in 3 seconds"' \
-    timeout 298 'notify-send -t 10000 "Screen will idle lock in 2 seconds"' \
-    timeout 299 'notify-send -t 10000 "Screen will idle lock in 1 second"' \
+    timeout 295 'swaymsg "output * dpms off"' \
+       resume 'swaymsg "output * dpms on"' \
     timeout 300 'lock-screen' \
     timeout 600 'swaymsg "output * dpms off"' \
        resume 'swaymsg "output * dpms on"' \
