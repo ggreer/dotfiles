@@ -165,7 +165,7 @@ seat * hide_cursor 1800
     bindsym XF86MonBrightnessDown exec light -U 3
     bindsym XF86MonBrightnessUp exec light -A 3
 
-    bindsym Print exec grim ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
+    bindsym $mod+Print exec grim ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
     bindsym $mod+XF86Back workspace prev_on_output
     bindsym $mod+XF86Forward workspace next_on_output
     bindsym $mod+Mod1+Left workspace prev_on_output
