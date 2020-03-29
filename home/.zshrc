@@ -205,7 +205,10 @@ bindkey "\e$terminfo[kcuf1]" forward-word
 # zle -N edit-command-line
 # bindkey '^X^e' edit-command-line
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Ubuntu
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Arch
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 ### Utility functions ###
