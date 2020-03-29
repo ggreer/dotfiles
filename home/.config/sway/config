@@ -243,9 +243,9 @@ seat * hide_cursor 1800
     bindsym $mod+k splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+o layout stacking
+    bindsym $mod+z layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+l layout toggle split
+    bindsym $mod+v layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+u fullscreen
