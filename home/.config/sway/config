@@ -14,10 +14,12 @@ set $mod Mod4
 #set $up t
 #set $right n
 # Your preferred terminal emulator
-set $term gnome-terminal
+#set $term gnome-terminal
+set $term alacritty
 #set $term urxvt
 # Your preferred application launcher
-set $menu dmenu_run -i -l 8 -m 0 -fn SourceCodePro-Regular -nb \#222 -nf \#aaa -sb \#000 -sf \#fff
+#set $menu dmenu_run -i -l 8 -m 0 -fn SourceCodePro-Regular -nb \#222 -nf \#aaa -sb \#000 -sf \#fff
+set $menu bemenu-run -l 8 --fn SourceCodePro-Regular --nb \#222 --nf \#aaa --sb \#000 --sf \#fff
 
 # -b == bottom of screen
 # -i == case insensitive
