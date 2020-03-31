@@ -127,6 +127,7 @@ export SFT_DEPLOY_AUTHOR=ggreer
 export SFT_DEPLOY_AUTHOR_EMAIL='geoff@greer.fm'
 # Run Qt apps in wayland mode
 export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=sway
 # Disabled because QT is garbage
 # export QT_QPA_PLATFORM='wayland;xcb' # Fall back to X if wayland plugin not available
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
