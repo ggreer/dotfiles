@@ -19,7 +19,8 @@ set $term alacritty
 #set $term urxvt
 # Your preferred application launcher
 #set $menu dmenu_run -i -l 8 -m 0 -fn SourceCodePro-Regular -nb \#222 -nf \#aaa -sb \#000 -sf \#fff
-set $menu bemenu-run -l 8 --fn SourceCodePro-Regular --nb \#222 --nf \#aaa --sb \#000 --sf \#fff
+#set $menu bemenu-run -i -l 8 -n -P '>' --fn 'Source Code Pro Regular 14' --nb \#222222 --nf \#aaaaaa --sb \#000000 --sf \#ffffff --hb \#000000 --hf \#ffffff
+set $menu bemenu-run -i -l 8 -n -P '>' --fn 'Source Code Pro Regular 14'
 
 # -b == bottom of screen
 # -i == case insensitive
