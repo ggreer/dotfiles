@@ -28,23 +28,23 @@ path_exists VPN {
 
 wireless _first_ {
   format_up = "%essid%quality %bitrate %frequency"
-  format_down = "W: -"
+  format_down = "W -"
   color_bad = "#aaaaaa"
   color_good = "#ffffff"
   separator_block_width = 20
 }
 
 ethernet bnep0 {
-  format_up = "BT: %ip"
-  format_down = "BT: -"
+  format_up = "ᛒ %ip"
+  format_down = "ᛒ -"
   color_bad = "#aaaaaa"
   color_good = "#ffffff"
   separator_block_width = 20
 }
 
 ethernet _first_ {
-  format_up = "E: %speed"
-  format_down = "E: -"
+  format_up = "E %speed"
+  format_down = "E -"
   color_bad = "#aaaaaa"
   color_good = "#ffffff"
   # trying to make connected eth not be yellow
@@ -76,7 +76,7 @@ memory {
 }
 
 disk "/" {
-  format = "💾 %avail"
+  format = "🖴 %avail"
   prefix_type = "decimal"
   low_threshold = 5
   separator_block_width = 20
