@@ -182,6 +182,8 @@ alias tet='ls -halt'
 alias cd..='cd ..'
 alias ..='cd ..'
 
+# Alacritty's terminfo isn't usually installed on remote machines. Pretend to be xterm-256color
+alias ssh='TERM=xterm-256color ssh'
 alias assh='ssh -A home.abughrai.be -p 2022 -D3000'
 #alias abumount='mkdir -p /Volumes/home.abughrai.be && sshfs -f -p 2022 home.abughrai.be:/x1 /Volumes/home.abughrai.be'
 #alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
