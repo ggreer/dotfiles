@@ -119,8 +119,9 @@ input "1133:49257:Logitech_USB_Laser_Mouse" {
 }
 
 input * {
-    xkb_layout us
-    xkb_variant dvorak
+    xkb_layout us,us
+    xkb_variant dvorak,
+    xkb_options grp:win_space_toggle
 }
 
 seat * hide_cursor 1800
