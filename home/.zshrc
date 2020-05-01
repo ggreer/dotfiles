@@ -135,6 +135,10 @@ export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 # Run firefox in wayland mode
 export MOZ_ENABLE_WAYLAND=1
+# Fix "Firefox is already running" when opening firefox from x11.
+export MOZ_DBUS_REMOTE=1
+# Force gstreamer to use vaapi
+export GST_VAAPI_ALL_DRIVERS=1
 # Run all gtk apps in wayland mode
 # export GDK_BACKEND=wayland (commented out because it breaks thunderbird & chromium)
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH

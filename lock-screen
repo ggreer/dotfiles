@@ -25,11 +25,11 @@ then
   export SWAYSOCK
 fi
 
-if [ -z "$DISPLAY" ]
-then
+#if [ -z "$DISPLAY" ]
+#then
   # Horrible hack in case we lack this env var
-  export DISPLAY=:0
-fi
+#  export DISPLAY=:0
+#fi
 
 LOCK_IMG=/home/$USER/lockscreen.png
 grim "$LOCK_IMG" && \
