@@ -141,10 +141,6 @@ export MOZ_DBUS_REMOTE=1
 export GST_VAAPI_ALL_DRIVERS=1
 # Run all gtk apps in wayland mode
 # export GDK_BACKEND=wayland (commented out because it breaks thunderbird & chromium)
-# export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-
-# Fix for xquartz
-#export DISPLAY=:0
 
 export HOMEBREW_NO_ANALYTICS=1
 
