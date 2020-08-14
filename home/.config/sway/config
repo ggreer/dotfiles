@@ -70,6 +70,7 @@ output DP-2 scale 1.5 subpixel rgb
 
 # x1 carbon hdmi
 output HDMI-A-1 scale 1.5 subpixel rgb
+output DP-1 scale 1.5 subpixel rgb
 
 
 ### Input configuration
