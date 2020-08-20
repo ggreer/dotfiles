@@ -129,7 +129,8 @@ export SFT_DEPLOY_AUTHOR_EMAIL='geoff@greer.fm'
 export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_DESKTOP=sway
 # Disabled because QT is garbage
-# export QT_QPA_PLATFORM='wayland;xcb' # Fall back to X if wayland plugin not available
+#export QT_QPA_PLATFORM='wayland;xcb' # Fall back to X if wayland plugin not available
+export QT_QPA_PLATFORM='xcb' # Fall back to X if wayland plugin not available
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export QT_QPA_PLATFORM_PLUGIN_PATH="/usr/lib/qt/plugins"
 # Needed to fix ripcord on wayland
@@ -145,7 +146,11 @@ export GST_VAAPI_ALL_DRIVERS=1
 # Work around https://github.com/swaywm/wlroots/issues/1877
 #export WLR_DRM_NO_MODIFIERS=1
 # Run all gtk apps in wayland mode
-# export GDK_BACKEND=wayland (commented out because it breaks thunderbird & chromium)
+export GDK_BACKEND=wayland # (commented out because it breaks thunderbird & chromium)
+
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 
 export HOMEBREW_NO_ANALYTICS=1
 
