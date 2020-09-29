@@ -167,10 +167,11 @@ seat * hide_cursor 2000
     bindsym XF86AudioNext exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
     bindsym XF86AudioPrev exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
 
-    bindsym XF86MonBrightnessDown exec light -U 3
-    bindsym XF86MonBrightnessUp exec light -A 3
+    bindsym XF86MonBrightnessDown exec light -U 3 && notify-send -t 1000 "Brightness set to $(printf "%.0f\n" $(light -G))%"
+    bindsym XF86MonBrightnessUp exec light -A 3 && notify-send -t 1000 "Brightness set to $(printf "%.0f\n" $(light -G))%"
 
     # Screenshot
+    #bindsym Print exec grim ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
     bindsym $mod+Print exec grim ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
     # Screenshot selection
     bindsym $mod+Shift+Print exec grim -g \"$(slurp)" ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
