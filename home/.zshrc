@@ -146,7 +146,7 @@ export GST_VAAPI_ALL_DRIVERS=1
 # Work around https://github.com/swaywm/wlroots/issues/1877
 #export WLR_DRM_NO_MODIFIERS=1
 # Run all gtk apps in wayland mode
-export GDK_BACKEND=wayland # (commented out because it breaks thunderbird & chromium)
+# export GDK_BACKEND=wayland # (commented out because it breaks thunderbird & chromium)
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
