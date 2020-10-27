@@ -332,7 +332,7 @@ bar {
     font "Source Code Pro Regular 9"
 #    font ProggyTinyTTSZ
     position bottom
-    status_command i3status
+    status_command ~/bin/my-i3status.sh
     mode hide
     hidden_state hide
     modifier $mod

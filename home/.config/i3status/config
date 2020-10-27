@@ -1,6 +1,7 @@
 general {
   colors = true
   interval = 10
+  output_format = i3bar
 }
 
 # order += "ipv6"
@@ -31,6 +32,7 @@ wireless _first_ {
   format_down = "W -"
   color_bad = "#aaaaaa"
   color_good = "#ffffff"
+  min_width = 500
   separator_block_width = 20
 }
 
