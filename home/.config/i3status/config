@@ -33,6 +33,7 @@ wireless _first_ {
   color_bad = "#aaaaaa"
   color_good = "#ffffff"
   min_width = 500
+  align = "right"
   separator_block_width = 20
 }
 
