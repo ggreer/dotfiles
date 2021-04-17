@@ -143,7 +143,7 @@ seat * hide_cursor 2000
     bindsym $mod+q kill
 
     # start your launcher
-    bindsym $mod+e exec $menu
+    bindsym $mod+e exec $menu | xargs swaymsg exec --
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -167,8 +167,10 @@ seat * hide_cursor 2000
     bindsym XF86AudioNext exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
     bindsym XF86AudioPrev exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
 
-    bindsym XF86MonBrightnessDown exec light -U 3 && notify-send -t 1000 "Brightness set to $(printf "%.0f\n" $(light -G))%"
-    bindsym XF86MonBrightnessUp exec light -A 3 && notify-send -t 1000 "Brightness set to $(printf "%.0f\n" $(light -G))%"
+    bindsym XF86MonBrightnessDown exec light -U 3
+    bindsym XF86MonBrightnessUp exec light -A 3
+    # bindsym XF86MonBrightnessDown exec light -U 3 && notify-send -t 1000 "Brightness set to $(printf "%.0f\n" $(light -G))%"
+    # bindsym XF86MonBrightnessUp exec light -A 3 && notify-send -t 1000 "Brightness set to $(printf "%.0f\n" $(light -G))%"
 
     # Screenshot
     #bindsym Print exec grim ~/Pictures/Screenshots/"Screenshot from $(date '+%F %H-%M-%S')".png
@@ -313,11 +315,13 @@ for_window [class="Pavucontrol"] floating enable
 # No titles on things I tend to keep on their own workspaces (browsers, slack)
 for_window [class="Chromium-browser"] border pixel
 for_window [app_id="firefox"] border pixel
+for_window [app_id="Brave-browser"] border pixel
 for_window [class="Slack"] border pixel
 for_window [app_id="firefox-trunk"] border pixel
 for_window [app_id="gnome-terminal-server"] border pixel
 
 # Inhibit idle for fullscreen browser stuff (mostly to prevent locking when watching youtube videos)
+for_window [app_id="Brave-browser"] inhibit_idle fullscreen
 for_window [app_id="firefox-trunk"] inhibit_idle fullscreen
 for_window [app_id="firefox"] inhibit_idle fullscreen
 
@@ -328,20 +332,23 @@ for_window [app_id="firefox"] inhibit_idle fullscreen
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    id main_bar
-    font "Source Code Pro Regular 9"
-#    font ProggyTinyTTSZ
-    position bottom
-    status_command ~/bin/my-i3status.sh
-    mode hide
-    hidden_state hide
-    modifier $mod
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #323232 #323232 #5c5c5c
-    }
+    swaybar_command waybar
 }
+#bar {
+#    id main_bar
+#    font "Source Code Pro Regular 9"
+##    font ProggyTinyTTSZ
+#    position bottom
+#    status_command ~/bin/my-i3status.sh
+#    mode hide
+#    hidden_state hide
+#    modifier $mod
+#    colors {
+#        statusline #ffffff
+#        background #323232
+#        inactive_workspace #323232 #323232 #5c5c5c
+#    }
+#}
 
 # class                   border  backgr. text    indicator child_border
 client.focused            #cccccc #aaaaaa #000000 #2e9ef4   #cccccc
@@ -358,6 +365,9 @@ client.focused            #cccccc #aaaaaa #000000 #2e9ef4   #cccccc
 
 # Start notification daemon
 exec mako
+
+# Make sure systemd has the right env vars for xdg-desktop-portal & xdg-desktop-portal
+exec "systemctl --user import-environment"
 
 exec swayidle -w \
     timeout 295 'swaymsg "output * dpms off"' \
