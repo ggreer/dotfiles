@@ -4,8 +4,13 @@
     "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    "modules-center": ["sway/window"],
+    "modules-left": [
+        "sway/workspaces",
+        "wlr/taskbar",
+        "sway/mode",
+        "sway/window"
+    ],
+    "modules-center": [],
     "modules-right": [
         "custom/i3status",
         "network",
@@ -39,6 +44,9 @@
     //         "default": ""
     //     }
     // },
+    "wlr/taskbar": {
+        "on-click": "activate"
+    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -98,7 +106,7 @@
         "format": "{:%H:%M}Z"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% {avg_frequency}GHz ",
         "tooltip": true
     },
     "memory": {
@@ -119,7 +127,13 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
+        "format-icons": [
+            "🌑",
+            "🌒",
+            "🌓",
+            "🌔",
+            "🌕",
+        ],
     },
     "battery": {
         "states": {
@@ -140,11 +154,11 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) {frequency}MHz ",
+        "format-wifi": "{essid} ({signalStrength}%) {frequency}MHz {icon} ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
