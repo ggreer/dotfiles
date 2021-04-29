@@ -119,7 +119,7 @@ input "1133:49257:Logitech_USB_Laser_Mouse" {
     natural_scroll enabled
 }
 
-input * {
+input type:keyboard {
     xkb_layout us,us
     xkb_variant dvorak,
     xkb_options grp:win_space_toggle
