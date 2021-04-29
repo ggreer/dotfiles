@@ -143,6 +143,8 @@ export MOZ_ENABLE_WAYLAND=1
 export MOZ_DBUS_REMOTE=1
 # Force gstreamer to use vaapi
 export GST_VAAPI_ALL_DRIVERS=1
+# Run OBS in wayland
+export OBS_USE_EGL=1
 # Work around https://github.com/swaywm/wlroots/issues/1877
 #export WLR_DRM_NO_MODIFIERS=1
 # Run all gtk apps in wayland mode
