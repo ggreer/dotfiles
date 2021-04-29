@@ -79,14 +79,14 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
-    margin: 0 4px;
+    padding: 0 8px;
+    /*margin: 0 4px;*/
     color: #ffffff;
 }
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    /*margin: 0 4px;*/
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -225,6 +225,11 @@ label:focus {
     background: #00b093;
     color: #740864;
     padding: 0 5px;
-    margin: 0 5px;
+    /*margin: 0 5px;*/
     min-width: 16px;
+}
+
+#custom-i3status {
+    margin-left: 4px;
+    margin-right: 4px;
 }
