@@ -1,0 +1,27 @@
+#!/bin/sh
+
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 title"
+    exit 1
+fi
+
+NOTE_DATE=$(date '+%Y-%m-%d')
+NOTE_TIME=$(date '+%H:%M:%S')
+
+# Replace spaces with dashes, convert to lower case, strip non-slug chars
+TITLE=$(echo "$@" | sed -E 's/ /-/g' | tr '[:upper:]' '[:lower:]' | tr -cd '[:alnum:]-')
+
+NOTE_DIR="$HOME/Documents/notes/"
+# TODO: allow no title (remove trailing dash)
+NOTE_FILE="$NOTE_DIR$NOTE_DATE-$TITLE.md"
+
+echo "$NOTE_FILE"
+if [ -e "$NOTE_FILE" ]; then
+    echo "$NOTE_FILE" already exists
+    exit
+fi
+
+echo "# $*
+" >> "$NOTE_FILE"
+
+$EDITOR "$NOTE_FILE"
