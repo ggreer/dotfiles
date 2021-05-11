@@ -204,6 +204,9 @@ alias lock='lock-screen'
 alias op='xdg-open'
 #alias op='open'
 
+# TODO: check if the editor already has the directory open or not
+alias notes="$EDITOR ~/Documents/notes/"
+
 alias oktagit="GIT_SSH_COMMAND='ssh -o \"IdentitiesOnly=yes\" -i ~/.ssh/id_rsa_okta' git"
 # bindkey -e #Use emacs mode, it's more sane for beginners
 # bindkey '^[[1;5C' forward-word # [Ctrl-RightArrow] - move forward one word
