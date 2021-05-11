@@ -87,7 +87,20 @@ output DP-1 scale 1.5 subpixel rgb
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input * {
+# Causes a crash if I plug in my mouse. No clue why. TODO: create a minimal config to reproduce
+#input * {
+#    natural_scroll enabled
+#}
+input type:pointer {
+    accel_profile flat
+    natural_scroll enabled
+}
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+}
+input type:mouse {
     natural_scroll enabled
 }
 
