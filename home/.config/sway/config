@@ -135,7 +135,7 @@ input "1133:49257:Logitech_USB_Laser_Mouse" {
 input type:keyboard {
     xkb_layout us,us
     xkb_variant dvorak,
-    xkb_options grp:win_space_toggle
+    xkb_options grp:win_space_toggle,caps:escape
 }
 
 seat * hide_cursor 2000
