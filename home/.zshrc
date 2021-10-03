@@ -104,7 +104,8 @@ source $HOME/.z_passwords
 # Enable command not found support on Ubuntu
 [[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 
-export EDITOR="subl -w"
+# Editor is VSCode in Wayland mode
+export EDITOR="code --enable-features=UseOzonePlatform --ozone-platform=wayland -w"
 export GIT_EDITOR=$EDITOR
 export SVN_EDITOR=$EDITOR
 
@@ -131,6 +132,7 @@ export XDG_CURRENT_DESKTOP=sway
 # Disabled because QT is garbage
 #export QT_QPA_PLATFORM='wayland;xcb' # Fall back to X if wayland plugin not available
 export QT_QPA_PLATFORM='xcb' # Fall back to X if wayland plugin not available
+export QT_QPA_PLATFORM='wayland' # Use wayland for QT apps
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export QT_QPA_PLATFORM_PLUGIN_PATH="/usr/lib/qt/plugins"
 # Needed to fix ripcord on wayland
