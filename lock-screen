@@ -8,6 +8,9 @@ then
   exit 0
 fi
 
+swaylock -f -i "/home/$USER/Pictures/Backgrounds/Starship\ and\ Super\ Heavy\ Stack.jpg" --font "Source Code Pro" --scaling fill
+exit 0
+
 swaylock -f -i "/home/$USER/Pictures/Backgrounds/wallhaven-zm9zwo.png" --font "Source Code Pro" --scaling fill
 exit 0
 
