@@ -36,6 +36,7 @@ focus_follows_mouse no
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
+#output * bg ~/Pictures/Backgrounds/Starship\ and\ Super\ Heavy\ Stack.jpg fill
 #output * bg /usr/local/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # red triangles
 #output * bg ~/Pictures/wallhaven/wallhaven-168635.png fill
@@ -45,7 +46,7 @@ focus_follows_mouse no
 #output * bg ~/Pictures/Backgrounds/wallhaven-721309.png fill
 # black with neon swirls
 #output * bg ~/Pictures/Backgrounds/wallhaven-zm9zwo.png fill
-#output * bg #000000 solid_color
+output * bg #000000 solid_color
 
 #
 # Example configuration:
@@ -138,7 +139,8 @@ input type:keyboard {
     xkb_options grp:win_space_toggle,caps:escape
 }
 
-seat * hide_cursor 2000
+seat * hide_cursor 10000
+seat * hide_cursor when-typing enable
 
 # Auto warp mouse to focus
 #mouse_warping container
