@@ -328,15 +328,17 @@ for_window [title="pinentry-gnome3"] floating enable, move position center
 for_window [class="Pavucontrol"] floating enable
 
 # No titles on things I tend to keep on their own workspaces (browsers, slack)
-for_window [class="Chromium-browser"] border pixel
+for_window [class="chromium-browser"] border pixel
 for_window [app_id="firefox"] border pixel
-for_window [app_id="Brave-browser"] border pixel
+for_window [app_id="brave-browser"] border pixel
+for_window [app_id="brave-browser-dev"] border pixel
 for_window [class="Slack"] border pixel
 for_window [app_id="firefox-trunk"] border pixel
 for_window [app_id="gnome-terminal-server"] border pixel
 
 # Inhibit idle for fullscreen browser stuff (mostly to prevent locking when watching youtube videos)
-for_window [app_id="Brave-browser"] inhibit_idle fullscreen
+for_window [app_id="brave-browser"] inhibit_idle fullscreen
+for_window [app_id="brave-browser-dev"] inhibit_idle fullscreen
 for_window [app_id="firefox-trunk"] inhibit_idle fullscreen
 for_window [app_id="firefox"] inhibit_idle fullscreen
 
