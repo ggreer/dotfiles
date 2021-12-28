@@ -380,11 +380,14 @@ client.focused            #cccccc #aaaaaa #000000 #2e9ef4   #cccccc
 #include /etc/sway/config.d/*
 #include /etc/sway/security.d/*
 
+# Make sure systemd has the right env vars for xdg-desktop-portal & xdg-desktop-portal
+exec "systemctl --user import-environment"
+
 # Start notification daemon
 exec mako
 
-# Make sure systemd has the right env vars for xdg-desktop-portal & xdg-desktop-portal
-exec "systemctl --user import-environment"
+# Start network manager applet
+exec nm-applet --indicator
 
 exec swayidle -w \
     timeout 295 'swaymsg "output * dpms off"' \

@@ -13,7 +13,7 @@
     "modules-center": [],
     "modules-right": [
         "custom/i3status",
-        "network",
+        // "network",
         "idle_inhibitor",
         "temperature",
         "cpu",
