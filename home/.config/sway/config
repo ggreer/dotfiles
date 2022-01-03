@@ -174,9 +174,9 @@ seat * hide_cursor when-typing enable
     bindsym $mod+Shift+q exit
 
     bindsym $mod+n exec ~/bin/lock-screen
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/\* index:/{print $3}') +5%
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/\* index:/{print $3}') -5%
-    bindsym XF86AudioMute exec pactl set-sink-mute $(pacmd list-sinks |awk '/\* index:/{print $3}') toggle
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     # Get pause buttons working for mpv
     bindsym XF86AudioPause exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
     bindsym XF86AudioNext exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control

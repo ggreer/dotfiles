@@ -22,7 +22,7 @@
         "backlight",
         "pulseaudio",
         "battery",
-        "battery#bat2",
+        // "battery#bat2",
         "sway/language",
         "clock",
         "clock#utc",
