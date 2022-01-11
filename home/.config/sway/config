@@ -327,6 +327,9 @@ workspace_auto_back_and_forth yes
 for_window [title="pinentry-gnome3"] floating enable, move position center
 for_window [class="Pavucontrol"] floating enable
 
+# Float zoom windows
+for_window [app_id="zoom"] floating enable
+
 # No titles on things I tend to keep on their own workspaces (browsers, slack)
 for_window [class="chromium-browser"] border pixel
 for_window [app_id="firefox"] border pixel
@@ -388,6 +391,9 @@ exec mako
 
 # Start network manager applet
 exec nm-applet --indicator
+
+# Start bluetooth applet
+exec blueman-applet
 
 exec swayidle -w \
     timeout 295 'swaymsg "output * dpms off"' \
