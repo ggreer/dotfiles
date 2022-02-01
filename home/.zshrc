@@ -105,7 +105,9 @@ source $HOME/.z_passwords
 [[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 
 # Editor is VSCode in Wayland mode
-export EDITOR="code --enable-features=UseOzonePlatform --ozone-platform=wayland -w"
+# export EDITOR="code --enable-features=UseOzonePlatform --ozone-platform=wayland -w"
+# Editor is Sublime Text
+export EDITOR="subl -w"
 export GIT_EDITOR=$EDITOR
 export SVN_EDITOR=$EDITOR
 

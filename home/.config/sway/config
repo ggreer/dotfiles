@@ -136,7 +136,7 @@ input "1133:49257:Logitech_USB_Laser_Mouse" {
 input type:keyboard {
     xkb_layout us,us
     xkb_variant dvorak,
-    xkb_options grp:win_space_toggle,caps:escape
+    xkb_options grp:shifts_toggle,caps:escape
 }
 
 seat * hide_cursor 10000
@@ -173,6 +173,8 @@ seat * hide_cursor when-typing enable
     # exit sway (logs you out of your wayland session)
     bindsym $mod+Shift+q exit
 
+    # emoji picker
+    bindsym $mod+Ctrl+space exec emote
     bindsym $mod+n exec ~/bin/lock-screen
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -394,6 +396,8 @@ exec nm-applet --indicator
 
 # Start bluetooth applet
 exec blueman-applet
+
+exec emote
 
 exec swayidle -w \
     timeout 295 'swaymsg "output * dpms off"' \
