@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -euo pipefail
+
+repo="$1"
+
+# TODO: verify that format is ssh not https git url
+repo_path=$(echo "$repo" | cut -d ':' -f 2 | sed -e 's/.git$//' )
+host_name=$(echo "$repo" | cut -d ':' -f 1 | sed -e 's/^git@//' )
+repo_path_dir="$host_name/$(dirname "$repo_path")"
+
+base_dir="$HOME/code/"
+
+cd "$base_dir"
+
+mkdir -p $repo_path_dir
+cd $repo_path_dir
+echo "Cloning $repo into $base_dir$repo_path/"
+git clone $repo
+echo "Cloned $repo into $base_dir$repo_path/"
