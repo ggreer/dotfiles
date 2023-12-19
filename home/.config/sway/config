@@ -184,8 +184,8 @@ seat * hide_cursor when-typing enable
     bindsym XF86AudioNext exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
     bindsym XF86AudioPrev exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
 
-    bindsym XF86MonBrightnessDown exec light -U 3
-    bindsym XF86MonBrightnessUp exec light -A 3
+    bindsym XF86MonBrightnessDown exec light -U 4
+    bindsym XF86MonBrightnessUp exec light -A 4
     # bindsym XF86MonBrightnessDown exec light -U 3 && notify-send -t 1000 "Brightness set to $(printf "%.0f\n" $(light -G))%"
     # bindsym XF86MonBrightnessUp exec light -A 3 && notify-send -t 1000 "Brightness set to $(printf "%.0f\n" $(light -G))%"
 
@@ -330,7 +330,7 @@ for_window [title="pinentry-gnome3"] floating enable, move position center
 for_window [class="Pavucontrol"] floating enable
 
 # Float zoom windows
-for_window [app_id="zoom"] floating enable
+#for_window [app_id="zoom"] floating enable
 
 # No titles on things I tend to keep on their own workspaces (browsers, slack)
 for_window [class="chromium-browser"] border pixel
@@ -355,6 +355,9 @@ for_window [app_id="firefox"] inhibit_idle fullscreen
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     swaybar_command waybar
+    hidden_state hide
+    mode hide
+    modifier Mod4
 }
 #bar {
 #    id main_bar

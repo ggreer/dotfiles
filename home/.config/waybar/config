@@ -1,4 +1,6 @@
 {
+    //"bar_id": "bar-0",
+    "ipc": true,
     // "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)

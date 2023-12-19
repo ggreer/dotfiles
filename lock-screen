@@ -8,10 +8,8 @@ then
   exit 0
 fi
 
-swaylock -f -i "/home/$USER/Pictures/Backgrounds/Starship\ and\ Super\ Heavy\ Stack.jpg" --font "Source Code Pro" --scaling fill
-exit 0
-
-swaylock -f -i "/home/$USER/Pictures/Backgrounds/wallhaven-zm9zwo.png" --font "Source Code Pro" --scaling fill
+#swaylock -f -i "${BACKGROUND_IMAGE}" --font "Source Code Pro" --scaling fill
+swaylock -c 999999 -k -F -f --font "Source Code Pro" --scaling fill
 exit 0
 
 # handle being called from systemd service
@@ -34,8 +32,8 @@ fi
 #  export DISPLAY=:0
 #fi
 
-LOCK_IMG=/home/$USER/lockscreen.png
-grim "$LOCK_IMG" && \
+LOCK_IMG=/home/$USER/.cache/lockscreen.png
+grim -o eDP-1 "$LOCK_IMG" && \
 #convert -blur 0x10 "$LOCK_IMG" "$LOCK_IMG" && \
 # convert -scale 12.5% -scale 800% "$LOCK_IMG" "$LOCK_IMG" && \
 convert -scale 5% -scale 2000% "$LOCK_IMG" "$LOCK_IMG" && \
