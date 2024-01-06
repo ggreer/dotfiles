@@ -1,0 +1,25 @@
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[font]
+size = 8.0
+
+[font.bold]
+family = "Source Code Pro"
+style = "Bold"
+
+[font.bold_italic]
+family = "Source Code Pro"
+style = "Bold Italic"
+
+[font.italic]
+family = "Source Code Pro"
+style = "Italic"
+
+[font.normal]
+family = "Source Code Pro"
+style = "Regular"
+
+[scrolling]
+history = 50000
